@@ -1,4 +1,6 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:booktickets/screens/bottom_bar.dart';
+import 'package:booktickets/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,13 +14,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: primary,
       ),
-      home: const BottomBar(),
+      home: AnimatedSplashScreen(
+        splash: Image.asset(
+          'assets/logo/logo.png',
+          height: 250,
+          width: 250,
+        ),
+        duration: 1500,
+        nextScreen: BottomBar(),
+        splashTransition: SplashTransition.fadeTransition,
+        backgroundColor: Colors.white,
+      ),
     );
   }
 }
-
-

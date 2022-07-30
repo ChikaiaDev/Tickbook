@@ -1,3 +1,5 @@
+import 'package:booktickets/screens/home_screen.dart';
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,12 +11,52 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
+  int _selectedIndex = 0;
+  static final List<Widget> _widgetsOption = <Widget>[
+    HomeScreen(),
+    const Text("Search"),
+    const Text("Tickets"),
+    const Text("Profile"),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("My tickets"),
-      ),
+      body: Center(child: _widgetsOption[_selectedIndex]),
+      bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+          elevation: 10,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          selectedItemColor: Color.fromARGB(255, 23, 128, 181),
+          unselectedItemColor: Color.fromARGB(255, 154, 190, 218),
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
+                activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
+                label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
+                activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
+                label: "Search"),
+            BottomNavigationBarItem(
+                icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
+                activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
+                label: "Ticket"),
+            BottomNavigationBarItem(
+                icon: Icon(FluentSystemIcons.ic_fluent_person_accounts_regular),
+                activeIcon:
+                    Icon(FluentSystemIcons.ic_fluent_person_accounts_filled),
+                label: "Profile")
+          ]),
     );
   }
 }
