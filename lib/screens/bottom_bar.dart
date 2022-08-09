@@ -36,8 +36,8 @@ class _BottomBarState extends State<BottomBar> {
           elevation: 10,
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          selectedItemColor: Color.fromARGB(255, 23, 128, 181),
-          unselectedItemColor: Color.fromARGB(255, 154, 190, 218),
+          selectedItemColor: const Color.fromARGB(255, 23, 128, 181),
+          unselectedItemColor: const Color.fromARGB(255, 154, 190, 218),
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(FluentSystemIcons.ic_fluent_home_regular),

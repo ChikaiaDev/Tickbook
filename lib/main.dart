@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           height: 250,
           width: 250,
         ),
-        duration: 1500,
+        duration: 30,
         nextScreen: BottomBar(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: Colors.white,
