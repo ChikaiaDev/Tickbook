@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 class HotelScreen extends StatelessWidget {
-  const HotelScreen({Key? key}) : super(key: key);
+  final Map<String, dynamic> hotel;
+  const HotelScreen({Key? key, required this.hotel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,18 +35,18 @@ class HotelScreen extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Styles.primaryColor,
-              image: const DecorationImage(
+              image:  DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage("assets/images/one.jpg")
+                image: AssetImage("assets/images/${hotel['image']}")
               )
             ),
           ),
           const Gap(10),
-          Text("Serena Hotel", style: Styles.headLineStyle2.copyWith(color: Colors.white38),),
+          Text(hotel['place'], style: Styles.headLineStyle2.copyWith(color: Colors.white38),),
           const Gap(5),
-          Text("Nairobi", style: Styles.headLineStyle3.copyWith(color: Colors.white),),
+          Text(hotel['location'], style: Styles.headLineStyle3.copyWith(color: Colors.white),),
           const Gap(15),
-          Text("KES. 16,000 / Night", style: Styles.headLineStyle2.copyWith(color: Colors.white60),)
+          Text("KES. ${hotel['price']} / Night", style: Styles.headLineStyle2.copyWith(color: Colors.white60),)
         ],
       ),
     );
