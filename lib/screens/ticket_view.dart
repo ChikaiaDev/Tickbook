@@ -33,7 +33,7 @@ class TicketView extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text("NYC",
+                      Text("NRB",
                           style: Styles.headLineStyle3
                               .copyWith(color: Colors.white)),
                       const Spacer(),
@@ -78,7 +78,7 @@ class TicketView extends StatelessWidget {
                       )),
                       ThicContainer(),
                       const Spacer(),
-                      Text("LDN",
+                      Text("MSA",
                           style: Styles.headLineStyle3
                               .copyWith(color: Colors.white))
                     ],
@@ -89,20 +89,20 @@ class TicketView extends StatelessWidget {
                       SizedBox(
                         width: 100,
                         child: Text(
-                          'New-York',
+                          'Nairobi',
                           style: Styles.headLineStyle4
                               .copyWith(color: Colors.white),
                         ),
                       ),
                       Text(
-                        "8H 30M",
+                        "00H 30M",
                         style:
                             Styles.headLineStyle4.copyWith(color: Colors.white),
                       ),
                       SizedBox(
                         width: 100,
                         child: Text(
-                          'London',
+                          'Mombasa',
                           textAlign: TextAlign.end,
                           style: Styles.headLineStyle4
                               .copyWith(color: Colors.white),
@@ -183,7 +183,7 @@ class TicketView extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("1st May", style: Styles.headLineStyle3.copyWith(color: Colors.white),),
+                          Text("11 Aug", style: Styles.headLineStyle3.copyWith(color: Colors.white),),
                           const Gap(5),
                           Text("DATE", style: Styles.headLineStyle4.copyWith(color: Colors.white),)
                         ],
