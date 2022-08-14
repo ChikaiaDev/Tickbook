@@ -36,7 +36,7 @@ class TicketView extends StatelessWidget {
                     children: [
                       Text(ticket['from']['code'],style: Styles.headLineStyle3.copyWith(color: Colors.white)),
                       const Spacer(),
-                      ThicContainer(),
+                      const ThicContainer(isColor: null,),
                       Expanded(
                           child: Stack(
                             children: [
@@ -75,7 +75,7 @@ class TicketView extends StatelessWidget {
                               ),
                             ],
                       )),
-                      ThicContainer(),
+                      const ThicContainer(isColor: null,),
                       const Spacer(),
                       Text(ticket['to']['code'],style: Styles.headLineStyle3.copyWith(color: Colors.white))
                     ],

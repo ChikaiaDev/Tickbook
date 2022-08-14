@@ -1,6 +1,7 @@
 import 'package:booktickets/utils/app_layout.dart';
 import 'package:booktickets/widgets/double_text_widget.dart';
 import 'package:booktickets/widgets/icon_text_widget.dart';
+import 'package:booktickets/widgets/ticket_tab.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -21,36 +22,7 @@ class SearchScreen extends StatelessWidget {
           Gap(AppLayout.getHeight(40)),
           Text("What are \n you looking for?", style: Styles.headLineStyle1.copyWith(fontSize: AppLayout.getHeight(40)),),
           Gap(AppLayout.getHeight(20)),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 3),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppLayout.getHeight(50)),
-              color: Colors.white60,
-            ),
-            child: Row(
-              children: [
-                Container(
-                  width: size.width*.44,
-                  padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(8), horizontal: AppLayout.getWidth(5)),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.horizontal(left: Radius.circular(AppLayout.getHeight(50))),
-                    color: Colors.white,
-                  ),
-                  child: const Center(child: Text('Airline tickets', style: TextStyle( fontWeight: FontWeight.w500),)),
-                ),
-                FittedBox(
-                  child: Container(
-                    width: size.width*.44,
-                    padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(8), horizontal: AppLayout.getWidth(5)),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.horizontal(right: Radius.circular(AppLayout.getHeight(50))),
-                    ),
-                    child: const Center(child: Text('Hotels',  style: TextStyle( fontWeight: FontWeight.w500))),
-                  ),
-                ),
-              ],
-            ),
-          ),
+          AppTicketTabs(tabOne: 'Airtline tickets', tabTwo: 'Hotels'),
           Gap(AppLayout.getHeight(25)),
           const AppIconText(icon: Icons.flight_takeoff_rounded, description: 'Departure'),
           Gap(AppLayout.getHeight(15)),
