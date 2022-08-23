@@ -39,7 +39,7 @@ class SearchScreen extends StatelessWidget {
             ),
           ),
           Gap(AppLayout.getHeight(30)),
-          const AppDoubleTextWidget(lable: 'Upcomming Flights'),
+          const AppDoubleTextWidget(lable: 'Upcomming Flights', subText: 'View All',),
           Gap(AppLayout.getHeight(20)),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

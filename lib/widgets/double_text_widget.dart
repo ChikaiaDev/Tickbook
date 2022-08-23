@@ -5,7 +5,8 @@ import '../utils/app_styles.dart';
 
 class AppDoubleTextWidget extends StatelessWidget {
   final String lable;
-  const AppDoubleTextWidget({Key? key, required this.lable}) : super(key: key);
+  final String subText;
+  const AppDoubleTextWidget({Key? key, required this.lable, required this.subText}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class AppDoubleTextWidget extends StatelessWidget {
           onTap: () {
             //print("you are tapped");
           },
-          child: Text("View all",
+          child: Text(subText,
               style: Styles.textStyle
                   .copyWith(color: Styles.primaryColor)),
         )
