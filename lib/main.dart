@@ -21,11 +21,11 @@ class MyApp extends StatelessWidget {
       ),
       home: AnimatedSplashScreen(
         splash: Image.asset(
-          'assets/logo/logo.png',
+          'assets/images/img_1.png',
           height: 250,
           width: 250,
         ),
-        duration: 30,
+        duration: 50,
         nextScreen: BottomBar(),
         splashTransition: SplashTransition.fadeTransition,
         backgroundColor: Colors.white,

@@ -103,6 +103,7 @@ class ProfileScreen extends StatelessWidget {
                     Gap(AppLayout.getHeight(20)),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start  ,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("You've got a new award", style: Styles.headLineStyle2.copyWith(color: Colors.white),),
                         Text("You have 150 flights in a year", style: Styles.textStyle.copyWith(color: Colors.white, fontWeight: FontWeight.w300),),
@@ -176,8 +177,6 @@ class ProfileScreen extends StatelessWidget {
               ],
             ),
           )
-
-
         ],
       ),
 

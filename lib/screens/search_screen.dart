@@ -85,7 +85,7 @@ class SearchScreen extends StatelessWidget {
                     children: [
                       Container(
                         width: size.width*0.44,
-                        height: AppLayout.getHeight(174),
+                        height: AppLayout.getHeight(185),
                         padding: EdgeInsets.symmetric(vertical: AppLayout.getHeight(15), horizontal: AppLayout.getWidth(15)),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(AppLayout.getHeight(18)),
@@ -96,7 +96,7 @@ class SearchScreen extends StatelessWidget {
                           children: [
                             Text("Discount\nfor survey", style: Styles.headLineStyle2.copyWith(color: Colors.white, fontWeight: FontWeight.bold),),
                             Gap(AppLayout.getHeight(10)),
-                            Text("Take the survey about our services and stand a chance to get amazing discounts on flights!", style: Styles.headLineStyle3.copyWith(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 18),),
+                            Text("Take the survey about our services and stand a chance to get amazing discounts on flights!", style: Styles.headLineStyle3.copyWith(color: Colors.white, fontWeight: FontWeight.w500, fontSize: 16),),
                           ],
                         ),
                       ),
